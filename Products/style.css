@@ -2,14 +2,16 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
       'Helvetica Neue', Arial, sans-serif;
     margin:0;
-  
+    background: #F8BEBE;
   }
+  /*Estilos para el header y los elementos que contiente */
+
   header{
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      padding: 10px 0;
+      padding: 0.8rem 0;
       z-index: 10000;
       display: flex;
       justify-content: space-between;
@@ -19,7 +21,7 @@ body{
   }
   header.sticky{
       background: #ffffff;
-      padding: 10px 80px ;
+      padding: 0.1rem 0.8rem ;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   }
 
@@ -33,70 +35,71 @@ body{
       color: #5ff7c2;
   }
   header #header-img{
-    height:5rem;
+    margin-left: 1.5rem;
+    height: 5rem;
     padding: 0.5rem;
   }
   nav{
     list-style: none;
     display:flex;
-    padding:0 50px;
+    padding:0 1rem;
   }
   a{
     color:#ff0157;
     text-decoration:none;
-    margin:30px;
+    margin:2rem;
     font-size:1.8em;
     font-weight:700;
   }
-  
+  /*Estilos del section*/
      #productos{
-    height:1000px;
-    padding:120px 50px;
+    padding: 8rem 2rem;
     height: 100%;
-    width: 100%;
-    z-index: -1;
-    background: #1b1b32;
-    background-image: linear-gradient(
-        115deg,
-        rgba(233, 146, 146, 0.815),
-        rgba(209, 68, 111, 0.842)),
-      url(https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.allrecipes.com%2Frecipe%2F157877%2Fvanilla-cupcake%2F&psig=AOvVaw37zOcckh78ObUgOvj2zzzM&ust=1686101995707000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCIj978TBrf8CFQAAAAAdAAAAABAd);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    width: 80%;
+  margin-left: 10%;
+    }
+    h2{
+      font-size:3em;
+    }
+    h3{
+      font-size: 1.8rem;
+      color: #B41B49;
+    }
+     h4{
+    font-size: 1.5rem;
     }
     #grid{
      display: grid;
     }
      #grid div{
         height:1fr;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 50%);
     }
    
     .cubiertasPar , .cubiertasImpar{
       width: 80%;
       margin: auto;
       display: grid;
-      grid-template-columns: repeat(2,1fr);
-      padding: 10px;
+      grid-template-columns: repeat(2,50%);
+      padding: 1.5rem;
     }
     
 
     .cubiertasPar .dobleGrid{
       grid-column: 1/2;
       grid-row: 1;
-      margin: 10px;
+     
     }
 
     .cubiertasPar .imagen{
       grid-column: 2/2;
       grid-row: 1;
-      margin: 10px;
+      
     }
     .cubiertasImpar .dobleGrid{
     grid-column: 2/2;
     grid-row: 1;
-    margin: 10px;
+   padding: 1.5rem;
     }
 
     .cubiertasImpar .imagen{
@@ -104,8 +107,34 @@ body{
     grid-row: 1;
     margin: 10px;
     }
+    li{
+      margin: 0.8rem;
+    }
+     p {
+      margin: 1.5rem;
+      font-size: 1.2rem;
+    }
+
+  /*a partir de los 766px hacia abajo cambian estos estilos de la pagina*/
+@media (max-width: 766px){
+  header nav li a:hover{
+    font-size: 1.6em;
+  }
+  a{
+  margin:0.5rem;
+  font-size:1.3em;
+  }
+  #grid{
+   display: block;
+}
+.cubiertasPar , .cubiertasImpar{
+  
+  grid-template-columns: repeat(1, 80%);
+  
+}
 
 
+}
     @media (max-width: 500px){
 
       #productos{
