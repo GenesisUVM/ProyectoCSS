@@ -3,9 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Dulce Sabores</title>
 </head>
 <body>
-    
+    <header>
+        <img id="header-img" src="../magdalena.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a id="nav-link" href="/Home/index.html">Novedades</a></li>
+                <li><a id="nav-link" href="/About_us/index.html">Informacion</a></li>
+                <li><a id="nav-link" href="/Products/index.html">Productos</a></li>
+                <li><a id="nav-link" href="#">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+    <div class="container">
+        <h2 id="title">¡Tu opinion es importante para nosotros!</h2>
+        <p class="description"> Si quieres comentarnos sobre alguna duda, consejo o sugerencia, por favor ¡haznos saber!</p>
+        <form id="formulario" action="">
+            <div class="input">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" name="name" id="name" autocomplete="given-name" required></input>
+              </div>
+            <div class="input">
+               <label for="email" id="email-label">Email</label>
+               <input  type="email" name="email" id="email" autocomplete="email" required></input>
+            </div>
+            <div class="input">
+               <label for="number" id="number-label">Age</label>
+                <input type="number" name="age" id="number" min="11" max="17" autocomplete="age" required ></input>
+            </div>
+            <div>
+               <p></p>
+               <textarea name="comment" id="comment" autocomplete="off"></textarea>
+            </div>
+            <div>
+               <button type="submit" id="submit" class="submit-button">
+                  Submit
+               </button> 
+        </form>
+    </div>
 </body>
 </html>
