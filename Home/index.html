@@ -3,9 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Dulce Sabores</title>
 </head>
 <body>
+    <header>
+        <img id="header-img" src="../magdalena.png" alt="Logo">
+        <nav>
+            <ul>
+                <li><a id="nav-link" href="#">Novedades</a></li>
+                <li><a id="nav-link" href="/About_us/index.html">Informacion</a></li>
+                <li><a id="nav-link" href="/Products/index.html">Productos</a></li>
+                <li><a id="nav-link" href="/Form/index.html">Formulario</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="novedades">
+        <article>
+            <h2>Novedades</h2>
+            <h3>Hoy veremos el uso de las boquillas</h3>
+            <img src="/Home/img/cupcake.png" alt="boquilla con manga pastelera" id="scroll">
+            <p>Es importante tener en cuenta algunas cosas básicas que nos harán más sencillo el manejo de las mismas como por ejemplo:</p>
+            <ul>
+                <li>No llenar demaisado la manga </li>
+                <li>Al llenar nuestra maga, colocarla en un vaso para no llenar los bordes y asi hacer menos desastre  </li>
+                <li>Sacar bien el aire de la manga antes de usarla </li>
+                <li>Presionar desde arriba hacia abajo para que no se nos devuelva el contenido de la misma</li>
+            </ul>
+        </article>
+        <h3>Ingrese su correo electronico </h3>
+        <p>Para recibir nuestras novedades más interesante</p>
+        <form id="form" action="https://www.freecodecamp.com/email-submit">
+            <input
+              name="email"
+              id="email"
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <input id="submit" type="submit" value="Get Started" class="input" />
+          </form>
+          <div id="videoB">
+          <iframe id="video"  src="https://www.youtube.com/embed/IcGSLF9LbDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+    </section>
+    <script>
+
+        window.onscroll = function parallax() {
+          let position = window.pageYOffset || document.documentElement.scrollTop
+          let image = document.getElementById("scroll");
+
+          image.style.bottom = position * 0.1 + "px"
+
+        }
+
+      </script>
     
 </body>
 </html>
