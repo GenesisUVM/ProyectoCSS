@@ -51,7 +51,7 @@ body{
   }
   .container{
     z-index: -1;
-    padding: 8rem 0;
+    padding: 10% 25%;
     height: 100%;
     width: 100%;
     background: #1b2f32;
@@ -69,18 +69,13 @@ body{
   .description{
     font-size: 1.6em;
   }
-  #title, .description{
-    display: flex;
-    justify-content: center;
-  }
+ 
   #formulario{
     background: #bae0db;
     width: 50%;
-    margin: auto;
-    border-radius: 1rem;
     box-shadow: 0 10px 20px rgba(97, 5, 17, 0.19);
     height: auto;
-    padding: 1.5rem;
+    padding: 1rem;
     
   }
   .input , .bar{
@@ -161,18 +156,15 @@ body{
       margin: 0 0.1rem;
   }
   .container{
-    padding: 5% 25%;
-    width: 80%;
+    padding: 5% 30%;
+    width: 60%;
   }
   #title{
     font-size: 1.8rem;
-  
-    margin: 10%;
   } 
   .description{
+    font-size: 1.2rem;
     
-    font-size: 1.5rem;
-    margin: 10%;
 
   }
    
