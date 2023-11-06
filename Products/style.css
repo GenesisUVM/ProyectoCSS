@@ -4,35 +4,39 @@ body{
     margin:0;
   
   }
-  #header{
+  header{
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
       padding: 10px 0;
       z-index: 10000;
-
+      display: flex;
       justify-content: space-between;
       align-items: center;
       transition: 0.5s;
       background:#fff;
   }
-  #header.sticky{
+  header.sticky{
       background: #ffffff;
       padding: 10px 80px ;
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
   }
-  
-  #header #nav li a:hover{
+
+  header nav li{
+    display: inline;
+  }
+  header nav li a:hover{
       font-size: 2em;
       padding-left: 10px;
       transition: 0.3s;
       color: #5ff7c2;
   }
-  #header-img{
-    height:100px;
+  header #header-img{
+    height:5rem;
+    padding: 0.5rem;
   }
-  #nav{
+  nav{
     list-style: none;
     display:flex;
     padding:0 50px;
