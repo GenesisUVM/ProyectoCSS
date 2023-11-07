@@ -1,53 +1,49 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
 
-// Conexión a la base de datos MongoDB
-mongoose.connect('mongodb://localhost:27017/dulceSabores', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+const app = express();
+const port = 3000;
 
-// Definir el esquema del documento
+// Configurar conexión a la base de datos MongoDB
+mongoose.connect('mongodb://localhost:27017/DulceSabores', { useNewUrlParser: true, useUnifiedTopology: true });
+
+// Definir esquema de datos
 const formularioSchema = new mongoose.Schema({
   nombre: String,
   correo: String,
   edad: String,
-  mensaje: String,
+  mensaje: String
 });
 
-// Crear el modelo basado en el esquema
+// Crear modelo
 const Formulario = mongoose.model('Formulario', formularioSchema);
 
-// Crear una instancia de Express
-const app = express();
+// Configurar body-parser para procesar los datos del formulario
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// Configurar el middleware para procesar datos JSON
-app.use(express.json());
-
-// Configurar una ruta para guardar los datos del formulario
-app.post('/guardar', (req, res) => {
-  const { nombre, correo, edad, mensaje } = req.body;
-
-  // Crear una nueva instancia del modelo
-  const nuevoFormulario = new Formulario({
-    nombre,
-    correo,
-    edad,
-    mensaje,
+// Configurar ruta para recibir los datos del formulario
+app.post('/formulario', (req, res) => {
+  // Crear instancia del modelo con los datos recibidos
+  const formulario = new Formulario({
+    nombre: req.body.nombre,
+    correo: req.body.correo,
+    edad: req.body.edad,
+    mensaje: req.body.mensaje
   });
 
-  // Guardar el formulario en la base de datos
-  nuevoFormulario.save((err) => {
+  // Guardar instancia en la base de datos
+  formulario.save((err) => {
     if (err) {
-      console.error(err);
+      console.log(err);
       res.status(500).send('Error al guardar los datos en la base de datos');
     } else {
-      res.send('Los datos se han guardado correctamente en la base de datos');
+      res.send('Datos guardados correctamente');
     }
   });
 });
 
 // Iniciar el servidor
-app.listen(3000, () => {
-  console.log('Servidor iniciado en el puerto 3000');
+app.listen(port, () => {
+  console.log(`Servidor escuchando en http://localhost:${port}`);
 });
