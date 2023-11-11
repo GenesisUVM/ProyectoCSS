@@ -7,6 +7,7 @@
     <title>Dulce Sabores</title>
 </head>
 <body>
+    <!--Todos los header contienen una imagen de una magdalena que seria el logo de la pagina y un nav-bar que permite cambiar entre las 4 paginas del sitio web --> 
     <header>
         <img id="header-img" src="../magdalena.png" alt="Logo">
         <nav>
@@ -18,12 +19,15 @@
             </ul>
         </nav>
     </header>
+    <!--En este section tenemos todo el contenido de la pagina como tal, principalmnete tenemos un article que contiene la informacion que proporcionan en la pagina,
+    un form para pedir el correo del cliente y un video que muestra el tema del article-->
     <section id="novedades">
         <article>
             <h2>Novedades</h2>
             <img src="/Home/img/cupcake.png" alt="boquilla con manga pastelera" id="scroll">
             <h3>Hoy veremos el uso de las boquillas</h3>
             <p>Es importante tener en cuenta algunas cosas básicas que nos harán más sencillo el manejo de las mismas como por ejemplo:</p>
+            <!--Lista de tips dentro del article para organizar mejor la informacion-->
             <ul>
                 <li>No llenar demaisado la manga </li>
                 <li>Al llenar nuestra maga, colocarla en un vaso para no llenar los bordes y asi hacer menos desastre  </li>
@@ -33,12 +37,13 @@
         </article>
         <h3>Ingrese su correo electronico </h3>
         <p>Para recibir nuestras novedades más interesante</p>
-        <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <!--Formulario para captar el email del cliente y poder enviarle informacion relevante-->
+        <form id="form" action="">
             <input
               name="email"
               id="email"
               type="email"
-              placeholder="Enter your email address"
+              autocomplete="email"
               required
             />
             <input id="submit" type="submit" value="Get Started" class="input" />
@@ -47,6 +52,7 @@
           <iframe id="video"  src="https://www.youtube.com/embed/IcGSLF9LbDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
     </section>
+    <!--script para efecto de paralla al hacer scroll en la página.-->
     <script>
 
         window.onscroll = function parallax() {

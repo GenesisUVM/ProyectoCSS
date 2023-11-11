@@ -7,6 +7,7 @@
     <title>Dulce Sabores</title>
 </head>
 <body>
+    <!--Todos los header contienen una imagen de una magdalena que seria el logo de la pagina y un nav-bar que permite cambiar entre las 4 paginas del sitio web --> 
     <header>
         <img id="header-img" src="../magdalena.png" alt="Logo">
         <nav>
@@ -18,8 +19,10 @@
             </ul>
         </nav>
     </header>
+    <!--En este div tenemos todos los elementos del formulario Incluido un encabezado y un parrafo anteriores a este-->
     <div class="container">
         <h2 id="title">¡Tu opinion es importante para nosotros!</h2>
+        <!--Formulario con los datos basicos como nombre, correo y un textarea para un comentario del cliente, tambien un boton para envial la informacion -->
         <p class="description"> Si quieres comentarnos sobre alguna duda, consejo o sugerencia, por favor ¡haznos saber!</p>
         <form id="formulario" action="/app.js" method="post">
             <div class="input">
@@ -29,10 +32,6 @@
             <div class="input">
                <label for="email" id="email-label">Email</label>
                <input  type="email" name="email" id="email" autocomplete="email" required></input>
-            </div>
-            <div class="input">
-               <label for="number" id="number-label">Age</label>
-                <input type="number" name="age" id="number" min="11" max="17" autocomplete="age" required ></input>
             </div>
             <div class="bar">
                 <textarea name="comment" id="comment" autocomplete="off"></textarea>
