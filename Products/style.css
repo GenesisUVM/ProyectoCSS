@@ -34,6 +34,11 @@ body{
       transition: 0.3s;
       color: #5ff7c2;
   }
+  header nav li a:focus{
+    font-size: 2em;
+    font-weight: 700 ;
+    color: #FF014D;
+}
   header #header-img{
     margin-left: 1.5rem;
     height: 5rem;
@@ -49,7 +54,7 @@ body{
     text-decoration:none;
     margin:2rem;
     font-size:1.8em;
-    font-weight:700;
+    font-weight:500;
   }
   /*Estilos del section*/
      #productos{

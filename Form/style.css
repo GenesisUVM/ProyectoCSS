@@ -33,6 +33,11 @@ body{
       transition: 0.3s;
       color: #f87b9d;
   }
+  header nav li a:focus{
+    font-size: 2em;
+    font-weight: 700 ;
+    color: #05E8BF;
+}
   header #header-img{
     height:5rem;
     padding: 0.5rem;
@@ -48,7 +53,7 @@ body{
     text-decoration:none;
     margin:2rem;
     font-size:1.8em;
-    font-weight:700;
+    font-weight:500;
   }
   .container{
    

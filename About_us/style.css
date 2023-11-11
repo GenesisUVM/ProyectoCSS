@@ -26,12 +26,19 @@ body{
   header nav li {
     display: inline;
   }
+
   header nav li a:hover{
       font-size: 2em;
       padding-left: 0.1rem;
       transition: 0.3s;
       color: #f87b9d;
   }
+    
+  header nav li a:focus{
+    font-size: 2em;
+    font-weight: 700 ;
+    color: #05E8BF;
+}
   header #header-img{
     margin-left: 1.5rem;
     height: 5rem;
@@ -47,7 +54,7 @@ body{
     text-decoration:none;
     margin:2rem;
     font-size:1.8em;
-    font-weight:700;
+    font-weight:500;
   }
  /*Estilos del section*/
  section{
