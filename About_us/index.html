@@ -32,18 +32,59 @@
                 divertida y que obtengas resultados hermosos. Para eso te queremos mostrar algunas de nuestras tecnicas favoritas y muchas fotos de los resultados que hemos logrado con ellas, 
                 para que las practiques cuanto antes
             </p>
-            <div class="grid">
-                <img src="./img/tarta.jpg" alt="">
-                <img src="./img/alfajores.jpg" alt="">
-                <img src="./img/torta_fria.webp" alt="">
-                <img src="./img/torta.jpg" alt="">
-                <img src="./img/fondant.jpg" alt="">
-                <img src="./img/dulce_leche.webp" alt="">
-                <img src="./img/cupcakes.jpg" alt="">
-                <img src="./img/cheescake.jpg" alt="">
+            <div class="carrusel">
+                <img class="imagenCa" src="./img/tarta.jpg" alt="tarta">
+                <img class="imagenCa" src="./img/alfajores.jpg" alt="alfajores">
+                <img class="imagenCa" src="./img/torta_fria.webp" alt="torta fria">
+                <img class="imagenCa" src="./img/torta.jpg" alt="torta">
+                <img class="imagenCa" src="./img/fondant.jpg" alt="torta con cubierta de fondant">
+                <img class="imagenCa" src="./img/dulce_leche.webp" alt="dulces de leche de colores">
+                <img class="imagenCa" src="./img/cupcakes.jpg" alt="cupcakes">
+                <img class="imagenCa" src="./img/cheescake.jpg" alt="cheescake">
+                <button class="next-button"> ?</button>
+                <button class="previous-button">¿ </button>
             </div>
             <p>Esperamos que sean de lo más convenientes para tus necesidades y queremos invitarte a que si tienes alguna duda o sugerencia sobre alguna técnica o receta nos comentes en nuestro foro a continuación</p>
         </article>
     </section>
+<script>
+    const carousel = document.querySelector('.carrusel');
+    const images = carousel.querySelectorAll('img');
+    let currentIndex = 0;
+
+    function showImage(index) {
+    images.forEach((image, i) => {
+        if (i === index) {
+        image.style.display = 'block';
+        } else {
+        image.style.display = 'none';
+        }
+    });
+    }
+
+    function nextImage() {
+    currentIndex++;
+    if (currentIndex >= images.length) {
+        currentIndex = 0;
+    }
+    showImage(currentIndex);
+    }
+
+    function previousImage() {
+    currentIndex--;
+    if (currentIndex < 0) {
+        currentIndex = images.length - 1;
+    }
+    showImage(currentIndex);
+    }
+
+    // Event listeners para los botones de siguiente y anterior
+    document.querySelector('.next-button').addEventListener('click', nextImage);
+    document.querySelector('.previous-button').addEventListener('click', previousImage);
+
+    // Mostrar la primera imagen al cargar la página
+    showImage(currentIndex);
+</script>
+
 </body>
 </html>
