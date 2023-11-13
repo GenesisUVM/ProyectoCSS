@@ -90,16 +90,20 @@ body{
     background: none;
     position: fixed;
     cursor: pointer;
-    width: 3rem;
+    width: 1rem;
 
   }
   .previous-button{
-    left: 0;
+    left: 3rem;
     top:50%;
+    
   }
   .next-button{
-    right: 0;
+    right: 3rem;
     top: 50%;
+  }
+  .before-img, .next-img{
+    width: 2rem;
   }
 
 /*a partir de los 1100px hacia abajo cambian estos estilos de la pagina*/
