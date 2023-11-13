@@ -10,7 +10,7 @@ body{
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
+      width: 100vw;
       padding: 0.8rem 0;
       z-index: 10000;
       display: flex;
@@ -61,7 +61,7 @@ body{
     padding: 8rem 2rem;
     height: 100%;
     width: 80%;
-  margin-left: 10%;
+    margin-left: 10%;
     }
     h2{
       font-size:3em;
@@ -73,19 +73,30 @@ body{
      h4{
     font-size: 1.5rem;
     }
+    /*Estilos para el grid*/
     #grid{
      display: grid;
     }
      #grid div{
-        height:1fr;
+        height:100vh;
         grid-template-columns: repeat(2, 50%);
     }
-   
+    /*estilos para efecto de paralla al hacer scroll en la página*/
+   .cubiertasPar{
+      background-image:url(img/2.png);
+      background-attachment: fixed;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      
+   }
+   .imagen img{
+    width: 25vw;
+   }
     .cubiertasPar , .cubiertasImpar{
       width: 80%;
       margin: auto;
       display: grid;
-      grid-template-columns: repeat(2,50%);
       padding: 1.5rem;
     }
     
@@ -114,12 +125,17 @@ body{
     }
     li{
       margin: 0.8rem;
+      font-size: 1.2rem;
+      font-weight: 500;
     }
      p {
       margin: 1.5rem;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
+      font-weight: 400;
     }
+@media (max-width: 1200px){
 
+}
   /*a partir de los 766px hacia abajo cambian estos estilos de la pagina*/
 @media (max-width: 766px){
   header nav li a:hover{
@@ -129,15 +145,50 @@ body{
   margin:0.5rem;
   font-size:1.3em;
   }
-  #grid{
-   display: block;
+  #productos{
+    margin:0;
+  }
+  h2{
+    margin: 3rem  0 0 0;
+  }
+#grid div{  
+  grid-template-columns: repeat(1, 90%);
+  grid-template-rows: 30% 70%;
+
+  
 }
 .cubiertasPar , .cubiertasImpar{
-  
-  grid-template-columns: repeat(1, 80%);
-  
+  grid-template-columns: repeat(1, 100%);
+
+}
+.cubiertasPar .dobleGrid{
+  grid-column: 1/2;
+  grid-row: 2/2;
+width: 100%;
+}
+.cubiertasPar .imagen{
+  grid-column: 1/2;
+  grid-row: 1/2;
+ 
+}
+.cubiertasImpar .dobleGrid{
+grid-column: 1/2;
+grid-row: 2/2;
+width: 100%;
+
+}
+.cubiertasImpar .imagen{
+grid-column: 1/2;
+grid-row: 1/2;
+
 }
 
+p , li {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 1.2rem;
+}
 
 }
     @media (max-width: 500px){
@@ -174,13 +225,10 @@ body{
     height:50px;
         margin: 0 10px;
   }
-    #grid{
-    grid-template-rows:repeat(3, 30%);
-    grid-template-columns:repeat(2,45%);
-      }
+  
     #grid div{
     height:250px;
-    grid-row-gap:0px;
+  
    }
         #productos{
     height:1200px;

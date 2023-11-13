@@ -12,10 +12,10 @@
         <img id="header-img" src="../magdalena.png" alt="Logo">
         <nav>
             <ul>
-                <li><a id="nav-link" href="#">Novedades</a></li>
-                <li><a id="nav-link" href="/About_us/index.html">Informacion</a></li>
-                <li><a id="nav-link" href="/Products/index.html">Productos</a></li>
-                <li><a id="nav-link" href="/Form/index.html">Formulario</a></li>
+                <li><a class="nav-link" href="#">Novedades</a></li>
+                <li><a class="nav-link" href="/About_us/index.html">Informacion</a></li>
+                <li><a class="nav-link" href="/Products/index.html">Productos</a></li>
+                <li><a class="nav-link" href="/Form/index.html">Formulario</a></li>
             </ul>
         </nav>
     </header>
@@ -24,10 +24,11 @@
     <section id="novedades">
         <article>
             <h2>¿Quieres aprender a hacer una torta volteada de piña como todo un profesional?</h2>
-            <img src="/Home/img/cupcake.png" alt="boquilla con manga pastelera" id="scroll">
+            
+            <img src="/Home/img/cupcake.png" alt="cupcake" id="scroll">
             <h3>Aqui te enseñamos los tips mas importantes para lograrlo</h3>
             <h3>También te regalaremos un PDF con la receta, sigue esta paso a paso y beras que es lo que siempre buscaste en una receta</h3>
-            <button id="pdf">Descargar PDF</button>
+           <a class="pdf" href="./RecetaRegalo.pdf" target="_blank">Dercargar PDF</a>
             <!--Lista de tips dentro del article para organizar mejor la informacion-->
             <ul>
                 <li>Ten ingredientes de buena calidad para asegurar </li>
@@ -61,18 +62,8 @@
           <iframe id="video"  src="https://www.youtube.com/embed/IcGSLF9LbDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
           </div>
     </section>
-    <!--script para efecto de paralla al hacer scroll en la página.-->
-    <script>
-
-        window.onscroll = function parallax() {
-          let position = window.pageYOffset || document.documentElement.scrollTop
-          let image = document.getElementById("scroll");
-
-          image.style.bottom = position * 0.1 + "px"
-
-        }
-
-      </script>
+   
+   
     
 </body>
 </html>

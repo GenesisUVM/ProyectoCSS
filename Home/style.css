@@ -29,13 +29,13 @@ body{
     display: inline;
   }
   
-  header nav li a:hover{
+  header nav li .nav-link:hover{
       font-size: 2em;
       padding-left: 10px;
       transition: 0.3s;
       color: #5ff7c2;
   }
-  header nav li a:focus{
+  header nav li .nav-link:focus{
     font-size: 2em;
     font-weight: 700 ;
     color: #FF014D;
@@ -50,7 +50,7 @@ body{
     display:flex;
     padding:0 1rem;
   }
-  a{
+  .nav-link{
     color:#ff0157;
     text-decoration:none;
     margin:2rem;
@@ -79,7 +79,6 @@ body{
     font-size:1.6em;
   }
   #novedades ul{
-    list-style:none;
     font-size:1.4em;
     font-weight:500;
     max-width:80%;
@@ -89,7 +88,19 @@ body{
     font-weight:500;
     max-width:80%;
   }
- 
+
+  .pdf{
+    font-size: 1.8rem;
+    text-decoration: none;
+    color: #ff0157;
+    margin: 2rem;
+  }
+  .pdf:hover{
+    font-size: 1.9rem;
+  }
+ .pdf:visited{
+  color: #40c899;
+}
   #form {
     margin: 0 1rem;
     padding: 0 1rem;
@@ -107,7 +118,7 @@ body{
     font-size:1em;
     width:20%;
   }
-  #submit, #pdf{
+  #submit {
     width: 8rem;
     padding: 0.4em;
     font-size:1em;
